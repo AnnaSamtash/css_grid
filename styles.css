@@ -4,20 +4,16 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: repeat(3, 150px);
-    border: 10px solid;
-    /* placement of elements in columns */
-    justify-items: center;
-    /* placement of elements in rows */
-    align-items: center;
-    /* placement of columns in the container if container has free place */
-    justify-content: space-evenly;
-    /* placement of rows in the container if container has free height */
-    align-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+
 }
 
-.grid-item4 {
-    justify-self: start;
-    align-self: end;
+.grid-item {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
 }
